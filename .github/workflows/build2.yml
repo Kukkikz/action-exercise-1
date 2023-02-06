@@ -10,6 +10,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Install Dependencies
+        run: npm ci
       - name: Run Lint
         run: npm run lint
   Test:
@@ -22,6 +24,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Install Dependencies
+        run: npm ci
       - name: Test
         run: npm run test
   Build:
@@ -34,5 +38,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Install Dependencies
+        run: npm ci
       - name: Build
         run: npm run build
